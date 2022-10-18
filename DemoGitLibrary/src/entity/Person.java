@@ -19,6 +19,20 @@ import javax.persistence.Id;
 public class Person implements Serializable {
 
     /**
+     * @return the age
+     */
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * @param age the age to set
+     */
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    /**
      * @return the lastName
      */
     public String getLastName() {
@@ -52,6 +66,7 @@ public class Person implements Serializable {
     private Long personId;
     private String firstName;
     private String lastName;
+    private int age; 
 
     public Person(String firstName) {
         this.firstName = firstName;
