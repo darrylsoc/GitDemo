@@ -19,6 +19,20 @@ import javax.persistence.Id;
 public class Person implements Serializable {
 
     /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
      * @return the firstName
      */
     public String getFirstName() {
@@ -37,6 +51,7 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long personId;
     private String firstName;
+    private String lastName;
 
     public Person(String firstName) {
         this.firstName = firstName;
